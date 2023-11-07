@@ -1,0 +1,9 @@
+{% if latest_time_entry_list %}
+    <ul>
+    {% for time_entry in latest_time_entry_list %}
+        <li><a href="/polls/{{ time_entry.id }}/">{{ time_entry.notes }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No time entries are available.</p>
+{% endif %}
